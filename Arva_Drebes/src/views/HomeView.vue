@@ -1,9 +1,13 @@
 <script setup>
-import Home from "../components/Home.vue"
+import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
+import MainHome from "@/components/MainHome.vue";
 </script>
 
 <template>
   <main>
-    <Home/>
+    <NavBar/>
+    <MainHome/>
+    <Footer/>
   </main>
 </template>
