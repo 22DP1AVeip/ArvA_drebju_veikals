@@ -4,7 +4,7 @@
 
 <template>
   <header class="tituls">
-    <img src="../../public/bildites/DALL_E_2025-01-28_14.24.49_-_A_modern__animated-style_logo_for_a_clothing_store_named__ArvA___featuring_a_single_icon_and_the_store_name_integrated_into_the_design._The_icon_is_a_-removebg-preview.png" class="logoarva">
+    <img src="../../public/bildites/Logo_Arva.png" class="logoarva">
     <nav class="navigation">
       <a href="#"><h3>HOME</h3></a>
       <a href="#about"><h3>ABOUT</h3></a>
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: max;
+  width: magit add ;
   height: 100px;
   background-color: white;
   color: #2c3e50;
