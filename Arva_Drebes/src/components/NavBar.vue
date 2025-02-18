@@ -7,12 +7,16 @@
     <img src="../../public/bildites/Logo_Arva.png" class="logoarva">
     <nav class="navigation">
       <a href="#"><h3>HOME</h3></a>
-      <a href="#about"><h3>ABOUT</h3></a>
+      <a href="/about"><h3>ABOUT</h3></a>
       <a href="#contact"><h3>CONTACT US</h3></a>
     </nav>
     <div class="auth-buttons">
+      <a href ="">
       <button class="login-button">Login</button>
+    </a>
+      <a href ="">
       <button class="signup-button">Signup</button>
+    </a>
     </div>
   </header>
 </template>

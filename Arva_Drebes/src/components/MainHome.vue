@@ -6,15 +6,17 @@
   <main>
     <section class="categories">
       <div class="category-card men">
-        <h2>Men's Clothing</h2>
-        <img src="../../public/bildites/mens-fashion.jpg" alt="Men's Clothing" />
-        <button>Shop Men</button>
+        <div class="image-container">
+          <img src="../../public/bildites/men_home_page.jpg" alt="Men's Clothing" />
+        </div>
+        <button>Explore Men's Wear</button>
       </div>
 
       <div class="category-card women">
-        <h2>Women's Clothing</h2>
-        <img src="../../public/bildites/womens-fashion.jpg" alt="Women's Clothing" />
-        <button>Shop Women</button>
+        <div class="image-container">
+          <img src="../../public/bildites/woman_home_page.jpg" alt="Women's Clothing" />
+        </div>
+        <button>Discover Women's Style</button>
       </div>
     </section>
   </main>
@@ -22,31 +24,12 @@
 
 <style scoped>
 main {
-  margin-top: 120px;
+  margin-top: 100px;
   text-align: center;
-  padding: 40px 20px;
-  background-color: white;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
 }
 
-.welcome {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.welcome img {
-  max-width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.welcome img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-/* Category Cards */
 .categories {
   display: flex;
   justify-content: center;
@@ -55,42 +38,55 @@ main {
 }
 
 .category-card {
-  width: 300px;
-  height: 400px;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  height: 450px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  position: relative;
 }
 
-.category-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .category-card img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+}
+
+.category-card:hover .image-container {
+  opacity: 1;
 }
 
 .category-card button {
-  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px;
+  padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
   background-color: black;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 2;
 }
 
 .category-card button:hover {
@@ -102,5 +98,6 @@ main {
 
 .category-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 </style>
