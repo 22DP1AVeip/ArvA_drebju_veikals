@@ -1,5 +1,5 @@
 <script setup>
-    import { ref } from "vue";
+import { ref } from "vue";
 </script>
 
 <template>
@@ -9,14 +9,14 @@
         <div class="image-container">
           <img src="../../public/bildites/men_home_page.jpg" alt="Men's Clothing" />
         </div>
-        <button>Explore Men's Wear</button>
+        <a href="/MenWear"><button>Explore Men's Wear</button></a>
       </div>
 
       <div class="category-card women">
         <div class="image-container">
           <img src="../../public/bildites/woman_home_page.jpg" alt="Women's Clothing" />
         </div>
-        <button>Discover Women's Style</button>
+        <a href="/WomanWear"><button>Discover Women's Style</button></a>
       </div>
     </section>
   </main>
@@ -41,7 +41,7 @@ main {
   width: 320px;
   height: 450px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 12px; /* Rounded edges for cards */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -52,7 +52,6 @@ main {
   padding: 20px;
   position: relative;
 }
-
 
 .image-container {
   width: 100%;
@@ -74,25 +73,31 @@ main {
   opacity: 1;
 }
 
-.category-card button {
+.category-card a {
   position: absolute;
   bottom: 20px;
+  z-index: 2;
+  text-decoration: none;
+  width: 80%;
+}
+
+.category-card button {
+  width: 100%;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  background-color: transparent;
+  color: black; /* Changed text color to black */
+  border: 2px solid black;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  text-transform: uppercase;
 }
 
 .category-card button:hover {
-  background-color: white;
-  color: black;
-  outline: 2px solid black;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
   transform: scale(1.05);
 }
 

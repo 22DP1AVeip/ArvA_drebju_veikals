@@ -1,60 +1,101 @@
 <script setup>
-    import { ref } from "vue";
+import { ref } from "vue";
 </script>
 
 <template>
-  <header class="tituls">
-    <img src="../../public/bildites/Logo_Arva.png" class="logoarva">
-    <nav class="navigation">
-      <a href="#"><h3>HOME</h3></a>
-      <a href="/about"><h3>ABOUT</h3></a>
-      <a href="#contact"><h3>CONTACT US</h3></a>
-    </nav>
-    <div class="auth-buttons">
-      <a href ="">
-      <button class="login-button">Login</button>
+  <nav class="nav-bar">
+    <a href="/">
+      <img src="../../public/bildites/Logo_Arva.png" class="logoarva" alt="Logo">
     </a>
-      <a href ="">
-      <button class="signup-button">Signup</button>
-    </a>
+    
+    <div class="right-section">
+      <button class="basket-button">
+        <img src="../../public/bildites/basket_icon.png" alt="Basket" class="basket-icon" />
+      </button>
+
+      <div class="auth-buttons">
+        <a href="/SignUp">
+          <button class="signup-button">Signup</button>
+        </a>
+        <a href="/LogIn">
+          <button class="login-button">Login</button>
+        </a>
+      </div>
+      
+      <div class="search-bar-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="search-button">🔍</button>
+      </div>
     </div>
-  </header>
+  </nav>
 </template>
 
 <style scoped>
-.tituls {
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: magit add ;
-  height: 100px;
+  width: 100%; /* Make nav bar stretch across full width */
+  height: 70px; /* Reduced height */
   background-color: white;
   color: #2c3e50;
-  padding: 20px 40px;
+  padding: 10px 20px; /* Reduced padding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: fixed; /* Keep nav fixed at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-
 
 .logoarva {
-  height: 150px;
-  width: max;
+  height: 100px; 
+  cursor: pointer;
 }
 
-.navigation {
+.right-section {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 15px; 
+  flex-wrap: nowrap;
+  margin-right: 30px; 
 }
 
-.navigation a {
-  text-decoration: none;
-  color: inherit;
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  max-width: 150px; 
+  overflow: hidden;
+}
+
+.search-bar {
+  padding: 8px 12px;
   font-size: 14px;
-  font-family: 'Trebuchet MS', sans-serif;
-  transition: color 0.3s ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
 }
 
-.navigation a:hover {
-  color: #000000;
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.basket-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-icon {
+  width: 25px;
+  height: 25px;
 }
 
 .auth-buttons {
@@ -63,12 +104,12 @@
 }
 
 .auth-buttons .login-button,
-.auth-buttons .signup-button {
-  padding: 10px 20px;
+.signup-button {
+  padding: 8px 16px;
   font-size: 14px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -79,7 +120,7 @@
   outline: 2px solid #000000;
 }
 
-.auth-buttons .signup-button {
+.signup-button {
   background-color: #000000;
   color: white;
   outline: 2px solid #000000;
@@ -91,10 +132,15 @@
   color: white;
 }
 
-.auth-buttons .signup-button:hover {
+.signup-button:hover {
   background-color: #ffffff;
   transform: scale(1.05);
   color: #000000;
   outline: 2px solid black;
+}
+
+body {
+  overflow-x: hidden;
+  margin-top: 70px; /* Add space for fixed nav bar */
 }
 </style>
