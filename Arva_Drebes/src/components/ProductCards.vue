@@ -80,26 +80,26 @@ const placeholderImage = '../../public/images/placeholder.jpg';
 </template>
 
 <style scoped>
-/* Container holding the product cards */
+
 .product-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* Increased gap for better spacing */
-  justify-content: space-between;
-  padding: 50px 20px 20px 20px; /* Added padding-top to push content below the navbar */
-  margin-top: 80px; /* Added margin-top to ensure the first row starts below the nav bar */
+  gap: 30px;
+  justify-content: center;
+  padding: 50px 20px 20px 20px;
+  margin-top: 80px;
 }
 
-/* Style for each individual product card */
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 19%; /* Adjusted width for larger cards (5 products per row) */
+  width: calc(20% - 30px);
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 200px;
 }
 
 .product-card:hover {
@@ -107,58 +107,52 @@ const placeholderImage = '../../public/images/placeholder.jpg';
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for product images */
 .product-img {
   width: 100%;
-  height: 250px; /* Increased height for larger images */
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
 }
 
-/* Product information section */
 .product-info {
   padding: 15px;
   text-align: center;
 }
 
 .product-name {
-  font-size: 20px; /* Increased font size for name */
+  font-size: 20px;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
 .product-price {
-  font-size: 18px; /* Increased font size for price */
+  font-size: 18px;
   color: #e74c3c;
   font-weight: bold;
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
   .product-card {
-    width: 22%; /* Adjust the width slightly for smaller screens */
+    width: calc(25% - 30px);
   }
 }
 
 @media (max-width: 992px) {
-  .product-container {
-    justify-content: space-between;
-  }
   .product-card {
-    width: 30%; /* 3 products per row on medium screens */
+    width: calc(33.33% - 30px);
   }
 }
 
 @media (max-width: 768px) {
   .product-card {
-    width: 45%; /* 2 products per row on smaller screens */
+    width: calc(50% - 30px);
   }
 }
 
 @media (max-width: 480px) {
   .product-card {
-    width: 90%; /* 1 product per row on very small screens */
+    width: calc(100% - 30px);
   }
 }
 </style>

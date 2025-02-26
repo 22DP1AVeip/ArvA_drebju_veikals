@@ -87,7 +87,7 @@ main {
   font-size: 16px;
   font-weight: bold;
   background-color: transparent;
-  color: black; /* Changed text color to black */
+  color: black; 
   border: 2px solid black;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
