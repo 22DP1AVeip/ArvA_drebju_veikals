@@ -41,10 +41,11 @@ import { ref } from "vue";
 
 <style scoped>
 .kajene {
-  background-color: #f9f9f9; /* Lighter background for modern look */
+  background-color: #f9f9f9;
   padding: 40px 20px;
   text-align: center;
   border-top: 2px solid #bdc3c7;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer-content {
@@ -53,6 +54,7 @@ import { ref } from "vue";
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  font-family: "Poppins", sans-serif;
 }
 
 .social-media {
@@ -81,6 +83,7 @@ import { ref } from "vue";
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .useful-links ul {
@@ -97,6 +100,7 @@ import { ref } from "vue";
   color: #333;
   font-size: 14px;
   transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .useful-links a:hover {
@@ -113,12 +117,14 @@ import { ref } from "vue";
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletter p {
   font-size: 14px;
   margin-bottom: 15px;
   color: #666;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletter form {
@@ -133,6 +139,7 @@ import { ref } from "vue";
   border-radius: 5px;
   width: 250px;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletter button {
@@ -144,6 +151,7 @@ import { ref } from "vue";
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .newsletter button:hover {
@@ -154,5 +162,6 @@ p {
   font-size: 14px;
   margin-top: 20px;
   color: #777;
+  font-family: "Poppins", sans-serif;
 }
 </style>

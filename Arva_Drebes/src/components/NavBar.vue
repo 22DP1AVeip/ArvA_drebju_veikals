@@ -34,6 +34,9 @@
         <a href="#" class="category-link" @click="toggleCategory('men')" :class="{ 'active': activeCategory === 'men' }">
           MEN
         </a>
+        <a href="#" class="category-link" @click="toggleCategory('accessories')" :class="{ 'active': activeCategory === 'accessories' }">
+          
+        </a>
       </div>
 
       <div class="menu-links">
@@ -112,7 +115,7 @@ function toggleCart() {
 </script>
 
 <style scoped>
-/* Main Navbar Styling */
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -154,7 +157,7 @@ function toggleCart() {
 }
 
 .logoarva {
-  height: 70px;
+  height: 100px;
   transition: transform 0.3s ease;
 }
 
